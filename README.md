@@ -60,8 +60,8 @@ taskboard/
 Clone your public repository and enter the project directory:
 
 ```bash
-git clone <YOUR_PUBLIC_GITHUB_REPOSITORY_URL>
-cd taskboard
+git clone https://github.com/yuvika028/taskboard-mern.git
+cd taskboard-mern
 ```
 
 ### 1. Configure and start the backend
@@ -156,7 +156,7 @@ Example task payload:
 }
 ```
 
-Allowed statuses are `todo`, `in-progress`, and `done`. Allowed priorities are `low', `medium`, and `high`.
+Allowed statuses are `todo`, `in-progress`, and `done`. Allowed priorities are `low`, `medium`, and `high`.
 
 ## AI-assisted development disclosure
 
@@ -178,7 +178,7 @@ Suggested tasks to work through in Kiro or Code0 (only report tasks you really p
 
 ## Before submitting
 
-- [ ] Replace `<YOUR_PUBLIC_GITHUB_REPOSITORY_URL>` with your public repository URL.
+- [x] Public repository URL: https://github.com/yuvika028/taskboard-mern
 - [ ] Confirm `.env` files and database credentials are not committed.
 - [ ] Use Kiro or Code0 as required by the evaluation and complete the AI session record honestly.
 - [ ] Run `npm test` in `server` and `npm run build` in `client`; record the real results.
