@@ -158,28 +158,30 @@ Example task payload:
 
 Allowed statuses are `todo`, `in-progress`, and `done`. Allowed priorities are `low`, `medium`, and `high`.
 
-## AI-assisted development disclosure
+## AI-assisted development
 
-**Important:** The evaluation instructions ask candidates to use **Kiro or Code0** and to describe their actual AI-assisted work. Do not claim to have used either tool unless you have done so. In this review pass, ChatGPT was used to inspect the supplied code, identify and fix error-handling issues, improve API validation, strengthen tests, and update this documentation. Before submitting, open the project in the required tool (Kiro or Code0), use it for genuine project work, and update the section below with your real tool and prompts/results.
+ChatGPT was used as a development assistant during the review and improvement of this project. It helped review the existing implementation, suggest fixes for error handling and input validation, improve API test coverage, and make the setup documentation clearer. The generated suggestions were reviewed before being incorporated; the project still needs local build and test verification.
 
-### Required Kiro/Code0 session record — complete before submission
+### AI-assisted tasks
 
-- **Tool actually used:** `[Kiro or Code0 — fill in after using it]`
-- **What I asked it to do:** `[Summarize your real prompts and the changes you accepted or rejected]`
-- **What I verified manually:** `[Record the commands/tests you actually ran and their results]`
+The following tasks were supported with AI assistance:
 
-Suggested tasks to work through in Kiro or Code0 (only report tasks you really performed):
+1. **Debugging and error handling:** Reviewed how the frontend responds when a task save or status update fails.
+2. **API validation:** Reviewed validation for task status and priority values, including invalid inputs.
+3. **Testing:** Helped improve API test coverage for task operations and error cases.
+4. **Refactoring and maintainability:** Reviewed the separation of routes, controllers, model, and error-handling middleware.
+5. **Documentation:** Improved the README with project structure, setup steps, API endpoints, and testing commands.
 
-1. Review the task form's save flow and make sure it does not clear user input when the API save fails.
-2. Review server-side validation for status and priority filters and suggest edge cases.
-3. Add or improve API tests for filtering, invalid input, and missing task IDs.
-4. Review the API error responses and frontend handling of a server/network failure.
-5. Explain the changes you accepted, changed yourself, or rejected, and run the build/tests.
+### Kiro or Code0 requirement
 
-## Before submitting
+The evaluation instructions specifically request use of **Kiro or Code0**. ChatGPT use does not replace that requirement. If Kiro or Code0 is required for submission, use the selected tool on real project tasks and update this section with the tool, prompts, changes accepted or rejected, and checks actually performed. Do not claim to have used a tool or run tests unless that is true.
 
-- [x] Public repository URL: https://github.com/yuvika028/taskboard-mern
-- [ ] Confirm `.env` files and database credentials are not committed.
-- [ ] Use Kiro or Code0 as required by the evaluation and complete the AI session record honestly.
-- [ ] Run `npm test` in `server` and `npm run build` in `client`; record the real results.
-- [ ] Start both apps locally and manually verify create, edit, delete, status change, search, and filters.
+## Submission checklist
+
+- Public repository: https://github.com/yuvika028/taskboard-mern
+- Confirm that no `.env` files, secrets, or database credentials are committed.
+- If required by the evaluator, complete a genuine Kiro or Code0 development session and document it above.
+- From the `server` directory, run `npm test`.
+- From the `client` directory, run `npm run build`.
+- Start both applications and manually check task creation, editing, deletion, status updates, search, and filters.
+
